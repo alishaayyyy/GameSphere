@@ -1,0 +1,674 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.form-control {
+  border-radius: 10px;
+  height: 40px;
+  padding: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0069d9;
+}
+
+/* welcome text */
+.welcome-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  
+  }
+  
+  .typed-text {
+  font-family: Arial Black;
+  }
+  
+  .cursor {
+  border-right: 2px solid #ffffff;
+  animation: blink 0.5s infinite;
+  }
+  
+  @keyframes blink {
+  0% {
+  opacity: 1;
+  }
+  100% {
+  opacity: 0;
+  }
+  }
+
+
+  /* profile page styling */
+
+  .gamer-profile-container {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gamer-banner {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .gamer-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: -50px auto 0;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gamer-info {
+    margin-top: 20px;
+  }
+  
+  .gamer-info h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .gamer-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .gamer-stats {
+    margin-top: 20px;
+  }
+  
+  .gamer-stats h3 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .gamer-stats ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .gamer-stats li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  
+/* home */
+/* General Reset & Smooth Transitions */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar Styling */
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar-light {
+  background-color: #ff9def !important; /* Dark Purple */
+}
+
+.navbar-dark {
+  background-color: #E432C6 !important; /* Dark Background */
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+
+.theme-toggle input {
+  display: none;
+}
+
+.theme-toggle label {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../pictures/login-page-background.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+/* Call-to-action Button */
+.cta-button {
+  
+  color: #333;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+/*  */
+
+/* Dark theme adjustments */
+.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+.light-theme {
+  background-color: #E6E6FA;
+  color: black;
+}
+
+.light-theme .cta-button {
+  background-color: #9370DB;
+  color: white;
+}
+
+.light-theme .cta-button:hover {
+  background-color: #7B68EE;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .navbar-nav {
+      flex-direction: column;
+      gap: 15px;
+      margin-left: 0;
+      align-items: center;
+  }
+
+  .theme-toggle {
+      margin-top: 10px;
+  }
+
+  .cta-button {
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 8px;
+  }
+
+  .nav-link {
+      font-size: 1rem;
+  }
+
+  .cta-button {
+      padding: 8px 15px;
+  }
+}
+
+.dark-theme .view-more-btn {
+  background-color: #ff9def;
+  color: white;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+  /* margin-left: 0px !important; Aligns the button to the left */
+  display: inline-block; /* Ensures the button behaves as a block-level element */
+}
+
+.dark-theme .view-more-btn:hover {
+  background-color: #7b1f8c !important; /* Darker purple */
+}
+
+/* gallery */
+/* Hover effect for the heading */
+/* light theme */
+.light-theme .heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #9223a0;
+  position: relative;
+  display: inline-block; 
+  transition: color 0.3s ease, transform 0.3s ease; 
+  margin: 0; 
+  padding: 20px 0; 
+}
+
+/* Underline effect */
+.light-theme .heading::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #9223a0; 
+  transition: width 0.3s ease, left 0.3s ease; 
+  transform: translateX(-50%);
+}
+
+.light-theme .heading:hover {
+  transform: scale(1.1); 
+  color: #9223a0; 
+}
+
+.light-theme .heading:hover::after {
+  width: 100%; 
+  /* left: 0; Move the underline to the left */
+  
+}
+/* Section Styling */
+.gallery-section {
+
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img:hover {
+  transform: scale(1.1); /* Slightly enlarge the image */
+}
+
+/* View More Button Styling */
+.view-more-btn {
+  background-color: #9223a0;
+  color: white;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+  /* margin-left: 0px !important; Aligns the button to the left */
+  display: inline-block; /* Ensures the button behaves as a block-level element */
+}
+
+.view-more-btn:hover {
+  background-color: #ff9def!important; /* Darker purple */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .view-more-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Section Styling */
+.popular-games {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f8f9fa; /* Light background */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #9223a0; /* Purple color */
+  margin-bottom: 40px;
+}
+
+/* Image Card Container */
+.game-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image fills the square */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px; /* Round the corners of the image */
+}
+
+/* Hover effect */
+.game-card:hover .game-image {
+  transform: scale(1.1); /* Slightly enlarge the image */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .game-card {
+    margin-bottom: 20px; /* Space between cards */
+  }
+}
+/* General Styling for Game Images */
+.game-img {
+  border-radius: 50%; /* Make the images circular */
+  width: 8em; /* Set width */
+  height: 8em; /* Set height to make them round */
+  object-fit: cover; /* Ensure the image covers the circle without distortion */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+/* Add hover effect on the images */
+.game-img:hover {
+  transform: scale(1.1); /* Slightly enlarge the image */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+/* Title styling under each image */
+.game-title {
+  margin-top: 10px;
+  font-family: Timmana, serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #9223a0; /* Purple color */
+}
+
+/* View More Button Styling */
+
+
+/* Make the images appear with equal spacing between them */
+.row {
+  display: flex;
+  justify-content: center; /* Center all images horizontally */
+  flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+  gap: 20px; /* Space between the images */
+}
+
+.col {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 768px) {
+  .game-img {
+    width: 8em; /* Smaller size on smaller screens */
+    height: 8em;
+  }
+
+  .game-title {
+    font-size: 1rem; /* Smaller text for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .game-img {
+    width: 7em; /* Even smaller size on mobile */
+    height: 7em;
+  }
+
+  .game-title {
+    font-size: 0.9rem; /* Adjust text size for mobile */
+  }
+}
+
+/* Ensure the card images are responsive */
+.card img {
+  width: 100%; /* Make sure the images fill the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Add rounded corners to the images */
+}
+
+/* Button Styling */
+.view-more-btn {
+  background-color: #9223a0;
+  color: white;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #ff7400; /* Change on hover */
+}
+
+/* Make sure the cards appear in 3 columns on large screens and 2 on medium screens */
+@media (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 50%; /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .col-md-6 {
+    flex: 0 0 100%; /* One column on very small screens */
+  }
+}
+
+/* nws section */
+/* Custom Cards Section */
+.custom-cards-section {
+  padding: 40px 0;
+
+}
+
+/* Card Layout */
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Card Styling */
+.custom-card {
+  width: 30%;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+}
+
+.custom-card .card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Card Body */
+.card-body {
+  padding: 20px;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #9223a0;
+}
+
+/* Card Text */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Read More Button */
+.read-more-btn {
+  background-color: #9223a0;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Underline effect */
+/* dark theme home page */
+.dark-theme .heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff9def;
+  position: relative;
+  display: inline-block; 
+  transition: color 0.3s ease, transform 0.3s ease; 
+  margin: 0; 
+  padding: 20px 0; 
+}
+.dark-theme .heading::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #ff9def; 
+  transition: width 0.3s ease, left 0.3s ease; 
+  transform: translateX(-50%);
+}
+
+.dark-theme .heading:hover {
+  transform: scale(1.1); 
+  color: #ff9def; 
+}
+
+.dark-theme .heading:hover::after {
+  width: 100%; 
+  /* left: 0; Move the underline to the left */
+  
+}
+
+
+
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height:auto; 
+  width: 100%;
+}
+
+
+/* news */
+/* Card Styling */
+.dark-theme .custom-card {
+  width: 30%;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #000000;
+  text-align: center;
+}
+
+.dark-theme  .custom-card .card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Card Body */
+.dark-theme  .card-body {
+  padding: 20px;
+}
+
+/* Card Title */
+.dark-theme  .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff9def;
+}
+
+/* Card Text */
+.dark-theme .card-text {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Read More Button */
+.read-more-btn {
+  background-color: #ff9def;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 15px;
+}
