@@ -13,7 +13,8 @@ signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    window.location.href = "../HTML/dashboard.html";
+    alert("yes")
+    // window.location.href = "../HTML/dashboard.html";
     // ...
   })
   .catch((error) => {

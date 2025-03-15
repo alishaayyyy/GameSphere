@@ -23,7 +23,8 @@ google.addEventListener('click', (e) => {
       // The signed-in user info.
       const user = result.user;
       // IdP data available using getAdditionalUserInfo(result)
-      window.location.href = "../HTML/dashboard.html";
+      // window.location.href = "../HTML/dashboard.html";
+      alert("success")
       updateUserProfile(user); // Call updateUserProfile function here
     })
     .catch((error) => {

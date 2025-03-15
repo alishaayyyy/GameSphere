@@ -560,6 +560,291 @@ body {
   display: inline-block;
   margin-top: 15px;
 }
+/* nws section */
+/* Custom Cards Section */
+.custom-cards-section {
+  padding: 40px 0;
+}
+
+/* Card Layout */
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Card Styling */
+.custom-card {
+  width: 30%; /* Default card width */
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth transition for hover */
+}
+
+.custom-card .card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Card Body */
+.card-body {
+  padding: 20px;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #9223a0;
+}
+
+/* Card Text */
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Read More Button */
+.read-more-btn {
+  background-color: #9223a0;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* Hover effect for cards */
+.custom-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+}
+
+/* Responsive Design */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .custom-card {
+    width: 45%; /* Cards take up 45% of the width on tablets */
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .custom-card {
+    width: 100%; /* Cards take up 100% of the width on smaller devices */
+  }
+  .row {
+    justify-content: center; /* Align items in the center on mobile */
+  }
+}
+
+/* Very small screens (extra small phones) */
+@media (max-width: 480px) {
+  .card-title {
+    font-size: 1.2rem; /* Adjust title size for very small screens */
+  }
+
+  .card-text {
+    font-size: 0.9rem; /* Adjust text size for very small screens */
+  }
+}
+
+
+/* General Styles */
+
+/* Footer Styling */
+.footer {
+  background-color: #ff9def;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.footer-text {
+  color: white;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+    /* Logo Hover Effect */
+    .navbar-brand img {
+      transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .navbar-brand img:hover {
+      transform: scale(1.1);  /* Slightly enlarge the image */
+      opacity: 0.9;  /* Make the image slightly transparent */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);  /* Add a subtle shadow */
+  }
+
+  /* Center Navbar Links */
+  .navbar-nav {
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+  }
+
+  /* Styling for Navbar Links */
+  .navbar-nav .nav-link {
+      color: white !important;
+      transition: color 0.3s ease, transform 0.3s ease, border-bottom 0.3s ease;
+      padding: 8px 15px; /* Adding some padding to the links */
+      position: relative;  /* For positioning the underline */
+  }
+
+  .navbar-nav .nav-link:hover {
+      color: #fff !important;  /* White text color */
+      transform: scale(1.1);  /* Slightly scale up the link on hover */
+      text-decoration: none;  /* Remove default underline */
+  }
+
+  /* Underline on hover */
+  .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: #9223a0;  /* Purple underline */
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover::after {
+      transform: scaleX(1);  /* Show underline on hover */
+      transform-origin: bottom left; /* Animate from left to right */
+  }
+  
+
+  /* Button Styling for Login and Signup */
+  .navbar-nav .btn-link  {
+      color: #fff;
+      font-weight: bold;
+      padding: 10px 25px;
+      border-radius: 5px;
+      background-color: #9223a0; /* Purple Background */
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-left: 10px; /* Space between buttons */
+      min-width: 150px;  /* Giving buttons some width */
+      text-align: center; /* Center text inside the buttons */
+  }
+
+  .navbar-nav .btn-link:hover {
+      background-color: #701e78; /* Darker Purple on Hover */
+      transform: scale(1.05);  /* Slightly scale up the button */
+      text-decoration: none;
+  }
+
+  /* Theme toggle */
+  .theme-toggle {
+      display: flex;
+      align-items: center;
+  }
+
+  .theme-toggle input {
+      margin-right: 10px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('./pictures/login-page-background.jpg') no-repeat center center/cover;
+      position: relative;
+  }
+
+  /* Call-to-action Button */
+  /* .cta-button {
+      background-color: #ffcc00;
+      color: #333;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background-color 0.3s;
+  } */
+
+  /* .cta-button:hover {
+      background-color: #e6b800; 
+  } */
+
+  /* Dark theme adjustments */
+  .dark-theme {
+      background-color: #121212;
+      color: white;
+  }
+
+  .light-theme {
+      background-color: #E6E6FA;
+      color: black;
+  }
+
+  .light-theme .cta-button {
+      background-color: #9370DB;
+      color: white;
+  }
+
+  .light-theme .cta-button:hover {
+      background-color: #7B68EE;
+  }
+
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+      .navbar {
+          flex-direction: column;
+          padding: 10px;
+      }
+
+      .navbar-nav {
+          flex-direction: column;
+          gap: 15px;
+          margin-left: 0;
+          align-items: center;
+      }
+
+      .theme-toggle {
+          margin-top: 10px;
+      }
+
+      .cta-button {
+          font-size: 1rem;
+          padding: 10px 20px;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .navbar {
+          padding: 8px;
+      }
+
+      .nav-link {
+          font-size: 1rem;
+      }
+
+      .cta-button {
+          padding: 8px 15px;
+      }
+  }
 
 
 
@@ -671,4 +956,23 @@ body {
   font-weight: bold;
   display: inline-block;
   margin-top: 15px;
+}
+
+/* Footer Styling */
+.dark-theme .footer {
+  background-color: #E432C6;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.dark-theme .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.dark-theme .footer-text {
+  color: white;
+  font-size: 14px;
+  margin-top: 20px;
 }

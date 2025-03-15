@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="../CSS/app.css">
+</head>
+<style>
+/* General Reset */
+
+
+/* Hero Section */
+.hero {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero .separator {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* About Us Section */
+/* General About Us Section Styles */
+.about-us {
+  background-color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about-us .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Styling for each content section */
+.content-item {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 30px;
+  width: 45%; /* Default width for larger screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dark-theme .content-item {
+  background-color: #000000;
+  border-radius: 8px;
+  padding: 30px;
+  width: 45%; /* Default width for larger screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.content-item h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #9223a0;
+}
+
+.content-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Hover Effect for content-item */
+.content-item:hover {
+  transform: translateY(-10px); /* Hover lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .about-us .container {
+    flex-direction: column; /* Stack content vertically */
+    padding: 0 15px;
+  }
+
+  .content-item {
+    width: 100%; /* Full width for smaller screens */
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .content-item h2 {
+    font-size: 1.5rem; /* Smaller font for headings */
+  }
+
+  .content-item p {
+    font-size: 1rem; /* Slightly smaller font for paragraphs */
+  }
+}
+
+@media (max-width: 480px) {
+  .content-item h2 {
+    font-size: 1.3rem; /* Even smaller font for headings on very small screens */
+  }
+
+  .content-item p {
+    font-size: 0.9rem; /* Smaller paragraph font */
+  }
+}
+
+
+</style>
+
+<body class="light-theme" style="font-style: oblique;" >
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../pictures/game1.png" alt="" style="height: 40px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto"> <!-- Centered links -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./About-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact-us.html">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto"> <!-- Right-aligned Login and Signup buttons -->
+                    <li class="nav-item">
+                        <a class="btn-link nav-link" href="../HTML/login.html">Login</a> <!-- Login button -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-link nav-link" href="../HTML/signup.html">Signup</a> <!-- Signup button -->
+                    </li>
+                </ul>
+                <div class="theme-toggle">
+                    <input type="checkbox" id="toggle">
+                    <label for="toggle"><i class="bulb fa-solid fa-sun"></i></label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+<!-- main -->
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1 class="heading" >About Us</h1>
+    
+  </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="about-us">
+  <div class="container">
+    <div class="content-item">
+      <h2>Our Gaming Website</h2>
+      <p>We are a leading gaming website offering news, reviews, and updates for the latest games. Whether you're a casual player or a pro, we have something for everyone. Our mission is to provide you with accurate, timely, and entertaining gaming content that enhances your experience.</p>
+    </div>
+
+    <div class="content-item">
+      <h2>Our Gaming Blogs</h2>
+      <p>Our blog covers everything from game strategies to industry insights, bringing you expert commentary and guides to help you level up your gaming experience. Stay updated with the latest trends and tips that every gamer should know.</p>
+    </div>
+
+    <div class="content-item">
+      <h2>Our Community</h2>
+      <p>We pride ourselves on building a strong, vibrant gaming community where players can connect, share experiences, and grow together. Join us in our forums, follow our social media channels, and become part of the exciting world of gaming.</p>
+    </div>
+
+    <div class="content-item">
+      <h2>Future of Gaming</h2>
+      <p>The future of gaming is ever-evolving, and we are committed to staying ahead of the curve. With new technologies like VR and AI, we aim to bring you the latest developments in gaming and provide insights into the next big trends.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+ 
+
+ <!-- Footer Section -->
+ <footer class="footer">
+  <div class="footer-content">
+ 
+    <p class="footer-text">© 2025 Your Company</p>
+  </div>
+</footer>
+  
+    <!-- Bootstrap JS and Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../JS/app.js"></script>
+</body>
+</html>

@@ -13,12 +13,12 @@ signInWithPopup,
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA1oMPNJtzi-mzgelwfAY5J-EF7GpeZ6d4",
-  authDomain: "gamesphere-880c6.firebaseapp.com",
-  projectId: "gamesphere-880c6",
-  storageBucket: "gamesphere-880c6.firebasestorage.app",
-  messagingSenderId: "589057341438",
-  appId: "1:589057341438:web:bc744afb33a4e20c6472af"
+  apiKey: "AIzaSyDOpspZW2fuQKcnKYNoyr9eVE3zo4koje4",
+  authDomain: "gamesphere-1deae.firebaseapp.com",
+  projectId: "gamesphere-1deae",
+  storageBucket: "gamesphere-1deae.firebasestorage.app",
+  messagingSenderId: "171917437802",
+  appId: "1:171917437802:web:60ecb0ee69a8b10f675313"
 };
 //let user = auth.currentUser;
 // Initialize Firebase

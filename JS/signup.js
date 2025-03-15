@@ -13,6 +13,7 @@ createUserWithEmailAndPassword(auth, email, password)
     // Signed up 
     const user = userCredential.user;
     alert("Successfull")
+    // window.location.href = "../HTML/login.html";
     // ...
   })
   .catch((error) => {
