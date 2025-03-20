@@ -11,6 +11,7 @@
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="./CSS/app.css">
     <style>
+      
         /* Logo Hover Effect */
         .navbar-brand img {
             transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
@@ -131,7 +132,7 @@
         }
 
         .light-theme .cta-button {
-            background-color: #9370DB;
+            background-color: #9223a0;
             color: white;
         }
 
@@ -176,6 +177,54 @@
                 padding: 8px 15px;
             }
         }
+        /* Hover effect for icons */
+.icon-item {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-item:hover {
+  color: #E432C6; /* Change to the color you want on hover */
+  transform: scale(1.1); /* Slightly increase the size on hover */
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+}
+
+
+/* reviewwwwwsssssss */
+
+
+
+#main {
+  max-width: 1200px; /* Ensure the container doesn't stretch too wide */
+  margin: 0 auto;    /* Center the container horizontally */
+  padding: 20px;     /* Add some padding around the content */
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around the container */
+  text-align: center;
+}
+
+/* Each paragraph of the document data */
+#main p {
+  padding: 15px;    /* Add padding around each paragraph */
+  margin-bottom: 20px; /* Space between paragraphs */
+  background-color: #fff; /* White background for each paragraph */
+  border: 1px solid #ddd; /* Light border around each paragraph */
+  border-radius: 8px; /* Rounded corners for each paragraph */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow around the paragraphs */
+  font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+
+/* Responsive styling: Stack the paragraphs vertically on smaller screens */
+@media (max-width: 768px) {
+  #main p {
+    padding: 10px; /* Less padding on smaller screens */
+    margin-bottom: 15px; /* Less space between paragraphs */
+  }
+
+}
+
+
     </style>
 </head>
 <body class="light-theme" style="font-style: oblique;" >
@@ -196,7 +245,7 @@
                         <a class="nav-link" href="./HTML/About-us.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#blogs">Blogs</a>
+                        <a class="nav-link" href="./HTML/blogs.html">Blogs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./HTML/contact-us.html">Contact Us</a>
@@ -204,15 +253,23 @@
                 </ul>
                 <ul class="navbar-nav ms-auto"> <!-- Right-aligned Login and Signup buttons -->
                     <li class="nav-item">
-                        <a class="btn-link nav-link" href="./HTML/login.html">Login</a> <!-- Login button -->
+                        <a id="login" class="btn-link nav-link" href="./HTML/login.html">Login</a> <!-- Login button -->
                     </li>
                     <li class="nav-item">
                         <a class="btn-link nav-link" href="./HTML/signup.html">Signup</a> <!-- Signup button -->
                     </li>
                 </ul>
-                <div style="margin-right: 10px; font-size: 1.5em;"><i class="fa-solid fa-user"></i></div>
-                <div style="margin-right: 10px; font-size: 1.5em;"><i class="fa-solid fa-right-from-bracket"></i></div>
-                <div class="theme-toggle">
+                
+                  <div class="icon-item" style="margin-right: 10px; font-size: 1.5em; color: white;">
+                    <a href="./HTML/profile-page.html"><i class="fa-solid fa-user"></i></a>
+                  </div>
+                
+                  <div class="icon-item" id="logout" style="margin-right: 10px; font-size: 1.5em; color: white;">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                  </div>
+                
+                
+                <div class="theme-toggle icon-item">
                     <input type="checkbox" id="toggle">
                     <label for="toggle"><i class="bulb fa-solid fa-sun"></i></label>
                 </div>
@@ -223,9 +280,9 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content text-center">
-            <h1 class="text-white">Welcome to GameZone</h1>
-            <p class="text-white">Your ultimate destination for gaming news, reviews, and more!</p>
-            <a href="#about" class="cta-button">Get Started</a>
+            <h1 class="text-white" style="box-shadow: rgb(255, 255, 255) 0px 5px 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-decoration: underline; background-color: #12121293;">Welcome to GameZone</h1>
+            <p class="text-white" style="box-shadow: rgb(255, 255, 255) 0px 5px 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; background-color: #12121293;">Your ultimate destination for gaming news, reviews, and more!</p>
+            <a  href="#about" class="cta-button">Get Started</a>
         </div>
     </section>
 
@@ -384,6 +441,10 @@
   </div>
 </section>
 
+<!-- reviews -->
+ <!-- Container for displaying the reviews (cards) -->
+  <div style="text-align: center; color: #121212;"><h1 class="heading">Comments on Our website</h1></div>
+  <div style="margin-top: 20px; margin-bottom: 20px; color: black;" id="main"></div>
 
 
  <!-- Footer Section -->
@@ -399,6 +460,6 @@
      <br>
     <!-- Bootstrap JS and Custom JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="../JS/app.js"></script>
+    <script type="module" src="./JS/app.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-import {signInWithEmailAndPassword,auth } from "../JS/auth.js";
+import {signInWithEmailAndPassword,auth } from "./auth.js";
 
 let form = document.getElementById('form');
 form.addEventListener('submit', (e)=>{
@@ -13,8 +13,8 @@ signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    alert("yes")
-    // window.location.href = "../HTML/dashboard.html";
+    window.location.href = "../index.html";
+    alert("Login successfully")
     // ...
   })
   .catch((error) => {

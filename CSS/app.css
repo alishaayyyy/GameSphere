@@ -176,6 +176,7 @@ body {
 .cta-button {
   
   color: #333;
+  background-color:  #E432C6 !important;
   padding: 12px 30px;
   border: none;
   border-radius: 5px;
@@ -845,6 +846,16 @@ body {
           padding: 8px 15px;
       }
   }
+          /* Hover effect for icons */
+.icon-item {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-item:hover {
+  color: #E432C6; /* Change to the color you want on hover */
+  transform: scale(1.1); /* Slightly increase the size on hover */
+  cursor: pointer; /* Change cursor to indicate it's clickable */
+}
 
 
 

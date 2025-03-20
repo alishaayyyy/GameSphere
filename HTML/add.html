@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blog</title>
+    <link rel="shortcut icon" href="../pictures/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container-fluid" style="height: 100vh; background-image: url('../pictures/login-page-background.jpg'); background-size: cover; background-position: center;">
+
+      <div class="row justify-content-center align-items-center h-100">
+          <!-- Add Blog Form Section -->
+          <div class="col-md-4">
+              <div class="card" style="background-color: rgba(255, 255, 255, 0.5);">
+                  <div class="card-body">
+                      <h2 class="text-center">Add Your Blog</h2>
+                      <form id="blog-form">
+                        <div class="form-group">
+                          <label for="blog-title">Blog Title:</label>
+                          <input type="text" class="form-control" id="blog-title" placeholder="Enter blog title">
+                        </div>
+                      
+                        <div class="form-group">
+                          <label for="blog-content">Blog Content:</label>
+                          <textarea class="form-control" id="blog-content" rows="4" placeholder="Write your blog content here..."></textarea>
+                        </div>
+                      
+                        <div class="form-group">
+                          <label for="blog-image">Upload Image (Optional):</label>
+                          <input type="file" class="form-control" id="blog-image" accept="image/*">
+                        </div>
+                      
+                        <button type="submit" class="btn btn-block" style="background-color: #E432C6;">Add Blog</button>
+                      </form>
+                      <a href="../index.html" style="color: rgb(0, 0, 0); margin-top: 4
+                      
+                      0px;"><i class="fa-solid fa-backward"></i> Back to home</a>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- JS Scripts -->
+  
+    <script type="module" src="../JS/auth.js"></script>
+    <script type="module" src="../JS/add-blog.js"></script> <!-- New Blog JS File -->
+</body>
+</html>

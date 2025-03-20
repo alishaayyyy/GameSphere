@@ -11,12 +11,191 @@
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="../CSS/app.css">
 </head>
+<style>
+    /* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the whole page */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Left Section - Blog Content */
+.left-section {
+  width: 60%;
+  padding-right: 20px;
+}
+
+.left-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.blog-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.blog-card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 48%;
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.blog-card p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Right Section - News, Gallery, and Extra Section */
+.right-section {
+  width: 40%;
+}
+
+.news-section {
+  margin-bottom: 30px;
+}
+
+.news-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.news-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.news-img {
+  width: 30%;
+  margin-right: 20px;
+}
+
+.news-img img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.news-text {
+  width: 70%;
+}
+
+.news-text p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Gallery Section */
+.gallery-section {
+  margin-bottom: 30px;
+}
+
+.gallery-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 23%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Extra Section */
+.extra-section {
+  margin-top: 30px;
+}
+
+.extra-section h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.extra-section p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-section {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .right-section {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .blog-card {
+    width: 100%;
+  }
+
+  .gallery img {
+    width: 48%;
+  }
+}
+
+/* blog button hover effect */
+.add-blog-btn {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #000; 
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.add-blog-btn:hover {
+  color: #007bff; 
+  transform: scale(1.1);
+}
+
+.add-blog-btn i {
+  margin-left: 5px; 
+  transition: transform 0.3s ease;
+}
+
+.add-blog-btn:hover i {
+  transform: rotate(10deg); 
+}
+.image{
+    height: 10em;
+    width: 17em;
+}
+</style>
 <body class="light-theme" style="font-style: oblique;" >
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="./pictures/game1.png" alt="" style="height: 40px;"></a>
+            <a class="navbar-brand" href="#"><img src="../pictures/game1.png" alt="" style="height: 40px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,7 +222,15 @@
                         <a class="btn-link nav-link" href="../HTML/signup.html">Signup</a> <!-- Signup button -->
                     </li>
                 </ul>
-                <div class="theme-toggle">
+                <div class="icon-item" style="margin-right: 10px; font-size: 1.5em; color: white;">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              
+                <div class="icon-item" style="margin-right: 10px; font-size: 1.5em; color: white;">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                </div>
+              
+                <div class="theme-toggle icon-item">
                     <input type="checkbox" id="toggle">
                     <label for="toggle"><i class="bulb fa-solid fa-sun"></i></label>
                 </div>
@@ -51,6 +238,84 @@
         </div>
     </nav>
 
+<!-- main work........ -->
+<div class="container">
+
+    <!-- Left Section: Blog Posts -->
+    <div class="left-section">
+      <h2>All Blogs</h2>
+
+      <!-- Blog Cards -->
+     <!-- Blog Cards -->
+     <div class="blog-cards" id="blog-cards-container">
+        <!-- Blog cards will be dynamically inserted here -->
+      </div>
+
+      <div  id="add" class="add-blog-btn" style="text-align: right; margin-top: 2em;">
+        Add your blog <i class="fa-solid fa-plus"></i>
+      </div>
+</div>
+
+    <!-- Right Section: News, Gallery, and Additional Section -->
+    <div class="right-section">
+      <!-- News Section -->
+      <div class="news-section">
+        <h3>Latest News</h3>
+        <div class="news-item">
+          <div class="news-img">
+            <img src="../pictures/game11.jpg" alt="News Image">
+          </div>
+          <div class="news-text">
+            <p> Activision has announced that Call of Duty: Warzone will be coming to smartphones soon, offering a large-scale, battle royale experience designed natively for mobile </p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-img">
+            <img src="../pictures/game12.jpg" alt="News Image">
+          </div>
+          <div class="news-text">
+            <p>An open-world survival game set in the Dune universe, expected to launch on May 20, 2025.</p>
+          </div>
+        </div>
+        <div class="news-item">
+            <div class="news-img">
+              <img src="../pictures/game13.jpg" alt="News Image">
+            </div>
+            <div class="news-text">
+              <p>A stealth action game expected to launch on August 28, 2025 .</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <div class="news-img">
+              <img src="../pictures/game14.jpg" alt="News Image">
+            </div>
+            <div class="news-text">
+              <p> An action-adventure game expected to launch on September 4, 2025.</p>
+            </div>
+          </div>
+          
+        <!-- More news items can be added here -->
+      </div>
+
+      <!-- Gallery Section -->
+      <div class="gallery-section">
+        <h3>Gallery</h3>
+        <div class="gallery">
+          <img src="../pictures/game7.jpg" alt="Gallery Image">
+          <img src="../pictures/game4.jpg" alt="Gallery Image">
+          <img src="../pictures/game10.jpg" alt="Gallery Image">
+          <img src="../pictures/game9.jpg" alt="Gallery Image">
+        </div>
+      </div>
+
+      <!-- Additional Section -->
+      <div class="extra-section">
+        <h3>About us:</h3>
+        <p>Our blog covers everything from game strategies to industry insights, bringing you expert commentary and guides to help you level up your gaming experience. Stay updated with the latest trends and tips that every gamer should know.</p>
+      </div>
+    </div>
+
+  </div>
 
 
  
@@ -68,6 +333,7 @@
      <br>
     <!-- Bootstrap JS and Custom JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="../JS/app.js"></script>
+    <!-- <script type="module" src="../JS/app.js"></script> -->
+    <script type="module" src="../JS/blogs.js"></script>
 </body>
 </html>

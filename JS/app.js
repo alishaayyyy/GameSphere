@@ -1,3 +1,7 @@
+
+import {signOut,auth,onAuthStateChanged ,getFirestore, collection, getDocs,app,db } from "../JS/auth.js";
+
+
 const toggler = document.querySelector('#toggle');
 const navbar = document.querySelector('.navbar');
 const bulb = document.querySelector('.bulb');
@@ -36,112 +40,72 @@ if (localStorage.getItem('theme')) {
 }
 
 
-// rating
 
-// rating.js
-let selectedRating = 0;
 
-// Get the star elements
-const stars = document.querySelectorAll('.star');
-stars.forEach(star => {
-  // Hover effect to highlight stars
-  star.addEventListener('mouseover', () => {
-    highlightStars(star.getAttribute('data-value'));
-  });
+// logout
 
-  // Reset color when mouse leaves
-  star.addEventListener('mouseout', () => {
-    resetStars();
-    if (selectedRating > 0) {
-      highlightStars(selectedRating);
-    }
-  });
+// signout
+let logout = document.getElementById('logout');
 
-  // Handle click event to select rating
-  star.addEventListener('click', () => {
-    selectedRating = parseInt(star.getAttribute('data-value'));
-    highlightStars(selectedRating);
-  });
-});
-
-// Highlight stars based on rating value
-function highlightStars(ratingValue) {
-  stars.forEach(star => {
-    if (parseInt(star.getAttribute('data-value')) <= ratingValue) {
-      star.style.color = "#ff641d"; // Orange
-    } else {
-      star.style.color = "white"; // Reset to white
-    }
-  });
-}
-
-// Reset stars to default color
-function resetStars() {
-  stars.forEach(star => {
-    star.style.color = "white";
-  });
-}
-
-// Handle submit rating
-document.getElementById('submit-rating').addEventListener('click', async () => {
-  if (selectedRating === 0) {
-    alert("Please select a rating.");
-    return;
+logout.addEventListener('click', (e) => {
+  const user = auth.currentUser; // Get the current user
+  
+  if (user) {
+    // If user is logged in, sign them out
+    signOut(auth)
+      .then(() => {
+        alert('You have successfully logged out.');
+        window.location.href = "./index.html"; // Redirect to the homepage
+      })
+      .catch((error) => {
+        alert('Error during logout.');
+      });
+  } else {
+    // If no user is logged in, show an alert saying the user is already logged out
+    alert('User is already logged out.');
   }
-
-  // Save rating to Firestore
-  await saveRatingToFirestore(selectedRating);
-
-  // Display thank you message
-  document.getElementById('rating-message').textContent = "Thank you for your rating!";
-
-  // Optionally, reset stars after submission
-  resetStars();
-  selectedRating = 0;
 });
 
-// Save rating to Firestore
-async function saveRatingToFirestore(rating) {
+// document.getElementById("login").onclick = function () {
+//   const user = auth.currentUser; // Get the current user
+
+//   if (user) {
+//       // User is logged in, redirect to profile.html
+//       alert("User is already logged in...")
+//       // window.location.href = '../index.html';
+//   } else{
+//       // User is not logged in, redirect to login.html
+//       alert("watching")
+//       window.location.href = '../HTML/login.html';
+//   }
+// };
+
+// reviews
+async function getData () {
   try {
-    await db.collection('ratings').add({
-      rating: rating,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    const Reading = await getDocs(collection(db, "reviews"));
+    let html = "";  // This will store the HTML content to display
+
+    Reading.forEach((doc) => {
+      const data = doc.data();
+      console.log(data);  // Log the data to the console to inspect it
+
+      // Add the document's data and the buttons to HTML
+      html += `
+        <p>
+          Name: ${data.name} <br>
+          Comment: ${data.message} <br>
+        </p>
+        <hr>
+      `;
     });
-    console.log('Rating saved successfully!');
+
+    // Add the generated HTML to the element with id 'main'
+    document.getElementById("main").innerHTML = html;
   } catch (error) {
-    console.error('Error saving rating: ', error);
+    // alert(error);
   }
 }
 
-// Load and display average rating (optional)
-async function loadAverageRating() {
-  const snapshot = await db.collection('ratings').get();
-  let totalRating = 0;
-  let totalRatings = snapshot.size;
-
-  snapshot.forEach(doc => {
-    totalRating += doc.data().rating;
-  });
-
-  const averageRating = totalRatings > 0 ? (totalRating / totalRatings).toFixed(1) : 0;
-  displayAverageRating(averageRating);
-}
-
-// Display the average rating as stars
-function displayAverageRating(averageRating) {
-  const averageStarsElement = document.getElementById('rating-message');
-  let starsHtml = '';
-
-  for (let i = 0; i < 5; i++) {
-    if (i < averageRating) {
-      starsHtml += '&#9733;'; // Filled star
-    } else {
-      starsHtml += '&#9734;'; // Empty star
-    }
-  }
-
-  averageStarsElement.innerHTML = `<strong>Average Rating:</strong> ${starsHtml} (${averageRating} stars)`;
-}
-
-// Load the average rating on page load
-loadAverageRating();
+// Call the getData function to display the documents
+getData();
